@@ -1,0 +1,104 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Page */
+body {
+  background: #B22222;
+}
+
+/* Container */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #9b9531;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.input-section input:focus {
+  border-color: #007bff;
+}
+
+/* Button */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Notes List */
+.notes-list {
+  list-style: none;
+}
+
+/* Note Item */
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.note-item span {
+  flex: 1;
+}
+
+/* Done style */
+.done {
+   color: #94A3B8;
+  text-decoration: line-through;
+  opacity: 0.6
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Smaller buttons */
+.actions button {
+  padding: 6px 10px;
+  font-size: 12px;
+  background-color : #5D4037 ;
+  color: #050505;
+}
