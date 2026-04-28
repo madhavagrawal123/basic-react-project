@@ -1,19 +1,38 @@
-// it is a faileed project
 import { useState } from "react";
-import sw from "star-wars-quotes";
+import "./QuoteGen.css";
 
-export default function Quotegen() {
-    let [Quote,SetQuote] = useState(sw());
-   let quotegen = () => {
-     SetQuote(sw());
-   }
+export default function QuoteGen() {
+  const [quote, setQuote] = useState("");
+  const [author, setAuthor] = useState("");
+
+  const getQuote = async () => {
+    try {
+      const res = await fetch("https://dummyjson.com/quotes/random");
+      const data = await res.json();
+
+      setQuote(data.quote);
+      setAuthor(data.author);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
-    <div>
-      <h2>Star Wars Quote</h2>
-       <h2>{Quote}</h2>
-       <button onClick={quotegen} >Generate New Quote</button>
-      
+    <div className="container">
+      <h1 className="title">✨ Quote Generator</h1>
+
+      <div className="card">
+        {quote ? (
+          <>
+            <p className="quote">“{quote}”</p>
+            <p className="author">— {author}</p>
+          </>
+        ) : (
+          <p className="placeholder">Click below to generate a quote</p>
+        )}
+
+        <button onClick={getQuote}>New Quote</button>
+      </div>
     </div>
   );
 }

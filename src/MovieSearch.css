@@ -1,0 +1,214 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #141414;
+  color: #ffffff;
+}
+
+/* APP CONTAINER */
+.app {
+  padding: 30px 60px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* TOP BAR (Fix alignment) */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* FAVORITES BUTTON */
+.topBar button {
+  background: #e50914;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.topBar button:hover {
+  background: #f6121d;
+}
+
+/* HEADER */
+.searchSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.searchSection h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #e50914;
+  letter-spacing: 1px;
+}
+
+/* SEARCH BOX */
+.searchBox {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.searchBox input {
+  padding: 12px 14px;
+  width: 320px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: #222;
+  color: white;
+}
+
+.searchBox input::placeholder {
+  color: #888;
+}
+
+.searchBox button {
+  background: #e50914;
+  border: none;
+  padding: 12px 18px;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.searchBox button:hover {
+  background: #f6121d;
+}
+
+/* RESULTS TITLE */
+h2 {
+  margin: 20px 0;
+  font-size: 22px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.card {
+  background: #181818;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: scale(1.06);
+  z-index: 5;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+/* DETAILS */
+.details {
+  padding: 12px;
+}
+
+.details h2 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.details p {
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+/* BUTTON GROUP */
+.details button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* PRIMARY BUTTON */
+.details button:first-of-type {
+  background: #ffffff;
+  color: black;
+  font-weight: 600;
+}
+
+.details button:first-of-type:hover {
+  background: #e6e6e6;
+}
+
+/* FAVORITE BUTTON */
+.details button:last-of-type {
+  background: #e50914;
+  color: white;
+}
+
+.details button:last-of-type:hover {
+  background: #f6121d;
+}
+
+/* NO RESULTS */
+.noResults {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+  font-size: 18px;
+}
+
+/* DETAILS VIEW */
+.card.info {
+  max-width: 340px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.card.info img {
+  height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+  }
+
+  .searchBox input {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
